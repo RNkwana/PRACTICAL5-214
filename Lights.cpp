@@ -8,3 +8,7 @@ void Lights::turnon(){
 void Lights::turnoff(){
     std::cout << "Light is turned off." << std::endl;
 }
+
+void Lights::update(){
+    std::cout << "Light is turned on due to motion detected!" << std::endl;
+}
