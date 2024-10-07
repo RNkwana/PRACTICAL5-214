@@ -8,9 +8,9 @@ OnOffCommand::OnOffCommand(bool s, Lights* l){
 
 void OnOffCommand::execute(){
     if(on){
-        light->turnoff();
-    } else {
         light->turnon();
+    } else {
+        light->turnoff();
     }
 }
 
