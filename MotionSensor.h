@@ -5,6 +5,7 @@
 #include <vector>
 
 #include "Subject.h"
+#include "Observers.h"
 class MotionSensor : public Subject {
 private: 
     std::vector<Observers*> observers;
