@@ -6,6 +6,7 @@
 MacroRoutine::~MacroRoutine(){
     for(Command* command : commands){
         delete command;
+        command = nullptr;
     } 
 }
 
@@ -17,6 +18,7 @@ void MacroRoutine::removeProcedures(Command* command) {
  // Use a lambda to ensure correct pointer comparison
         commands.erase(std::remove_if(commands.begin(), commands.end(),
             [command](Command* cmd) { return cmd == command; }), commands.end());
+
 }
 
 void MacroRoutine::execute(){
